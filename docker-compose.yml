@@ -1,21 +1,8 @@
 version: '3'
-services: 
-  app-mirval-basic:
+services:
+  web:
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    ports: 
-      - "80:80"
-    volumes:
-      - /usr/app/node_modules
-      - .:/usr/app
-    stdin_open: true
-  tests:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /usr/app/node_modules
-      - .:/usr/app
-    command: ["npm", "run", "test"]
-    stdin_open: true
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
