@@ -10,7 +10,6 @@ script:
   - docker run -e CI=true pabloeng05/docker-react npm run test
 
 deploy:
-  skip_cleanup: true 
   provider: elasticbeanstalk
   region: 'us-east-1'
   app: 'app-mirval-basic'
